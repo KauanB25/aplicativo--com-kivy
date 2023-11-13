@@ -1,0 +1,33 @@
+MDScreen:
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: "#1E1E15"
+        
+        Barra:            
+        Mybox:
+
+<Mybox>:
+    MDFloatLayout:
+
+        md_bg_color: 'white'
+        MDIconButton:
+            icon: "alert-outline"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            icon_size: "100sp"
+            on_release: root.get_text()
+            
+        MDTextField:
+            id: campo
+            hint_text: "Alerta"
+            pos_hint: {"center_x": .5, "center_y": .3}
+            size_hint_x: .8
+
+<Cadastro_email>:
+    id: card
+    orientation: 'vertical'
+    hint_text: 'email'
+        
+<Barra>:
+    title: "App"
+    anchor_title: "left"
+    right_action_items: [["plus", lambda x: root.abrir()]]
